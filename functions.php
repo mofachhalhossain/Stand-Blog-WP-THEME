@@ -21,6 +21,7 @@ add_action( 'wp_enqueue_scripts', 'sb_load_scripts' );
 
 function theme_setup(){
 
+
     add_theme_support( 'custom-logo' );
     add_theme_support( 'post-thumbnails' );
 
@@ -35,18 +36,36 @@ function theme_setup(){
 add_action( 'after_setup_theme', 'theme_setup' );
 
 
-function sidebar(){
+add_action( 'widgets_init', 'sidebar' );
+
+function sidebar() {
     register_sidebar(
         array(
-            'name' => 'Sidebar',
-            'id' => 'sidebar-widget',
-            'description' => 'Sidebar Area',
-            'before_widget' => '<div class="col-lg-12">',
-            'after_widget' => '</div>',
-            'before_title' => '<h4 class="widget-title">',
-            'after_title' => '</h4>'
+            'name' => esc_html__('Blog Sidebar'),
+            'id' => 'sidebar-blog',
+            'description' => esc_html__('Your Blog Sidebar Here'),
+            'before_widget' => '<div class="widget-wrapper">',
+            'after_widget' => '</div>'
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name' => esc_html__('Footer Top'),
+            'id' => 'top-footer',
+            'description' => esc_html__('Footer Top'),
+            'before_widget' => '<div class="footer-top-wrapper">',
+            'after_widget' => '</div>'
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name' => esc_html__('Footer Bottom'),
+            'id' => 'bottom-footer',
+            'description' => esc_html__('Footer Bottom'),
+            'before_widget' => '<div class="footer-bottom-wrapper">',
+            'after_widget' => '</div>'
         )
     );
 }
-
-add_action( 'widgets_init', 'sidebar' );

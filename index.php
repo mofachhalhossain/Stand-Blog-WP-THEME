@@ -157,7 +157,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <div class="main-content">
+            <div class="main-content" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/cta-bg.jpg)">
               <div class="row">
                 <div class="col-lg-8">
                   <span>Stand Blog HTML5 Template</span>
@@ -238,11 +238,11 @@
                     <p>No Posts Found !</p>
                   <?php endif;?>
                   </div>
-                <div class="col-lg-12">
+                <!-- <div class="col-lg-12">
                   <div class="main-button">
                     <a href="blog.html">View All Posts</a>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -250,7 +250,7 @@
             <div class="sidebar">
               <div class="row">
                 <div class="col-lg-12">
-                  
+                  <?php get_sidebar(); ?>
                 </div>
               </div>
             </div>
