@@ -1136,6 +1136,10 @@ footer p a:hover {
   transition: all 0.3s;
 }
 
+.menu-item a:hover {
+  color: #fb9857;
+}
+
 .collapse.navbar-collapse {
   justify-content: flex-end;
 }
@@ -1199,4 +1203,11 @@ footer p a:hover {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+}
+
+.navbar .navbar-brand h1 {
+  color: #1e1e1e;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 900;
 }

@@ -20,9 +20,16 @@ add_action( 'wp_enqueue_scripts', 'sb_load_scripts' );
 
 
 function theme_setup(){
-
-
-    add_theme_support( 'custom-logo' );
+    $custom_logo_defaults = array(
+		'height'               => 300,
+		'width'                => 300,
+		'flex-height'          => true,
+		'flex-width'           => true,
+		'header-text'          => array( 'site-title', 'site-description' ),
+		'unlink-homepage-logo' => true, 
+	);
+	add_theme_support( 'custom-logo', $custom_logo_defaults );
+ 
     add_theme_support( 'post-thumbnails' );
 
     register_nav_menus(
@@ -35,8 +42,6 @@ function theme_setup(){
 
 add_action( 'after_setup_theme', 'theme_setup' );
 
-
-add_action( 'widgets_init', 'sidebar' );
 
 function sidebar() {
     register_sidebar(
@@ -69,3 +74,5 @@ function sidebar() {
         )
     );
 }
+
+add_action( 'widgets_init', 'sidebar' );
