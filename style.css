@@ -74,11 +74,12 @@ h6 {
 }
 
 .main-button a:hover {
-  background-color: #fb9857;
+  background-color: #c95508;
+  color: #ffffff;
 }
 
 .heading-page {
-  padding-top: 110px;
+  /* padding-top: 110px; */
 }
 
 .page-heading {
@@ -430,6 +431,7 @@ header .navbar {
 
 .blog-posts .blog-thumb img {
   width: 100%;
+  max-height: 400px;
   overflow: hidden;
 }
 
@@ -460,6 +462,7 @@ header .navbar {
 .blog-posts .down-content ul.post-info li {
   display: inline-block;
   margin-right: 8px;
+  font-size: 14px;
 }
 
 .blog-posts .down-content ul.post-info li:after {
@@ -1210,4 +1213,97 @@ footer p a:hover {
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 900;
+}
+
+.custom-slider {
+  position: relative;
+}
+
+.main-banner.header-text {
+  padding: 20px 0;
+}
+.custom-slide {
+  /* max-width: 35%; */
+}
+.custom-slide img {
+  width: 620px;
+  height: 500px;
+}
+
+.custom-slider-inner {
+  display: flex;
+  gap: 10px;
+}
+
+button.custom-prev {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  cursor: pointer;
+  color: #fff;
+  font-size: 30px;
+  width: 60px;
+  height: 70px;
+  display: inline-block;
+  background-color: rgba(250, 250, 250, 0.3);
+  border: none;
+}
+
+button.custom-next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  cursor: pointer;
+  color: #fff;
+  font-size: 30px;
+  width: 60px;
+  height: 70px;
+  display: inline-block;
+  background-color: rgba(250, 250, 250, 0.3);
+  border: none;
+}
+.custom-slide-content {
+  display: block;
+  position: absolute;
+  top: 70%;
+  left: auto;
+  padding: 0px 30px;
+  max-width: 600px;
+}
+
+.custom-slide-content .post-categories a {
+  color: #f58a43;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.25px;
+}
+
+.custom-slide-content a h4 {
+  color: #ffffff;
+}
+
+.custom-post-info {
+  display: flex;
+  color: #fff;
+  gap: 10px;
+}
+
+.custom-slide-content h4 {
+  font-size: 24px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+  margin: 10px 0px 12px 0px;
+}
+
+ul.custom-post-info li {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.grid-system .blog-thumb img {
+  max-height: 300px;
 }
