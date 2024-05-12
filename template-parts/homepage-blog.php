@@ -6,14 +6,11 @@ $args = array(
     'excerpt' => true,
 );
 $query = new WP_Query( $args );
-
 ?>
 
 <?php if( $query->have_posts() ):
-
 while ( $query->have_posts() ) : $query->the_post();
 ?>
-
 <article>
     <div class="blog-post">
         <div class="blog-thumb">
@@ -44,7 +41,7 @@ while ( $query->have_posts() ) : $query->the_post();
                                 }else{
                                     echo '';
                                 }
-                                ?>
+                            ?>
                         </ul>
                     </div>
                     <div class="col-6">

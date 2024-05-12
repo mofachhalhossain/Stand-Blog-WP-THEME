@@ -2,19 +2,7 @@
  get_header(); 
 /* Template Name: Home Template */
 ?>
-
 <body <?php body_class(); ?>>
-
-    <!-- ***** Preloader Start ***** -->
-    <!-- <div id="preloader">
-        <div class="jumper">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>   -->
-    <!-- ***** Preloader End ***** -->
-
     <!-- Header -->
     <header class="site-header">
         <nav class="navbar navbar-expand-lg">
@@ -68,48 +56,45 @@
             <div class="custom-slider">
                 <div class="custom-slider-inner">
                     <?php
-          $args = array(
-              'post_type'      => 'post',
-              'posts_per_page' => 3,
-              'orderby'        => 'date',
-              'order'          => 'DESC'
-          );
+                        $args = array(
+                            'post_type'      => 'post',
+                            'posts_per_page' => 10,
+                            'orderby'        => 'date',
+                            'order'          => 'DESC'
+                        );
 
-          $recent_posts = new WP_Query($args);
+                        $recent_posts = new WP_Query($args);
 
-          if ($recent_posts->have_posts()) :
-              while ($recent_posts->have_posts()) : $recent_posts->the_post();
-          ?>
-                    <div class="custom-slide">
-                        <?php if (has_post_thumbnail()) : ?>
-                        <?php the_post_thumbnail(); ?>
-                        <?php endif; ?>
-                        <div class="custom-slide-content">
-                            <div class="custom-meta-category">
-                                <?php the_category(); ?>
-                            </div>
-                            <a href="<?php the_permalink(); ?>">
-                                <h4><?php the_title(); ?></h4>
-                            </a>
-                            <ul class="custom-post-info">
-                                <li><?php the_author(); ?></li>
-                                <li><?php the_date(); ?></li>
-                                <li><?php comments_number(); ?></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <?php endwhile;
-          wp_reset_postdata();
-          endif; ?>
+                        if ($recent_posts->have_posts()) :
+                            while ($recent_posts->have_posts()) : $recent_posts->the_post();
+                        ?>
+                                <div class="custom-slide">
+                                    <?php if (has_post_thumbnail()) : ?>
+                                    <?php the_post_thumbnail(); ?>
+                                    <?php endif; ?>
+                                    <div class="custom-slide-content">
+                                        <div class="custom-meta-category">
+                                            <?php the_category(); ?>
+                                        </div>
+                                        <a href="<?php the_permalink(); ?>">
+                                            <h4><?php the_title(); ?></h4>
+                                        </a>
+                                        <ul class="custom-post-info">
+                                            <li><?php the_author(); ?></li>
+                                            <li><?php the_date(); ?></li>
+                                            <li><?php comments_number(); ?></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            <?php endwhile;
+                    wp_reset_postdata();
+                    endif; ?>
                 </div>
                 <button class="custom-prev"><</button>
                 <button class="custom-next">></button>
-                <div class="custom-dots">
-                </div>
             </div>
         </div>
         </div>
-
             <!-- Banner Ends Here -->
 
             <section class="call-to-action">

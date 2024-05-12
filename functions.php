@@ -92,6 +92,16 @@ function sidebar() {
             'after_widget' => '</div>'
         )
     );
+
+    register_sidebar(
+        array(
+            'name' => esc_html__('Post Comment'),
+            'id' => 'post-comment',
+            'description' => esc_html__('Post Comment'),
+            'before_widget' => '<div class="post-comment-wrapper">',
+            'after_widget' => '</div>'
+        )
+    );
 }
 
 add_action( 'widgets_init', 'sidebar' );
