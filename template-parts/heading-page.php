@@ -6,7 +6,7 @@
                 <div class="col-lg-12">
                     <div class="text-content">
                         <h4><?php single_post_title(); ?></h4>
-                        <h2>Our Recent Blog Entries</h2>
+                        <?php the_excerpt(); ?>
                     </div>
                 </div>
             </div>

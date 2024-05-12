@@ -1,6 +1,10 @@
-<?php get_header(); ?>
+<?php get_header(); 
+/* Template Name: Contact Template */
+?>
 
-<header class="site-header">
+<body <?php body_class(); ?>>
+
+    <header class="site-header">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>">
@@ -49,17 +53,40 @@
     <?php echo get_template_part( 'template-parts/heading','page'); ?>
     <!-- Banner Ends Here -->
 
-    <!-- Page Content Start-->
-    <section class="about-us">
-      <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-              <?php the_content();?>
+<section class="contact-us">
+    <div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+        <div class="down-contact">
+            <div class="row">
+            <div class="col-lg-8">
+                <div class="sidebar-item contact-form">
+                <div class="sidebar-heading">
+                    <h2>Send us a message</h2>
+                </div>
+                <div class="content">
+                    <?php the_content();?>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar-item contact-information">
+                <?php echo get_template_part( 'template-parts/contact','sidebar')?>
+                </div>
+            </div>
             </div>
         </div>
-      </div>
-    </section>
-    <!-- Page Content End-->
+        </div>
+        
+        <div class="col-lg-12">
+        <div id="map">
+            <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="450px" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        </div>
+    </div>
+    </div>
+</section>
 
+</body>
 
 <?php get_footer(); ?>

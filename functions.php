@@ -50,6 +50,7 @@ function theme_setup(){
 	add_theme_support( 'custom-logo', $custom_logo_defaults );
  
     add_theme_support( 'post-thumbnails' );
+    add_post_type_support( 'page', 'excerpt' );
 
     register_nav_menus(
         array(
@@ -99,6 +100,16 @@ function sidebar() {
             'id' => 'post-comment',
             'description' => esc_html__('Post Comment'),
             'before_widget' => '<div class="post-comment-wrapper">',
+            'after_widget' => '</div>'
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name' => esc_html__('Contact Page Sidebar'),
+            'id' => 'contact-sidebar',
+            'description' => esc_html__('Contact Page Sidebar'),
+            'before_widget' => '<div class="contact-sidebar-wrapper">',
             'after_widget' => '</div>'
         )
     );
