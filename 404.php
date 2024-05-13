@@ -1,5 +1,5 @@
 <?php get_header(); 
-/* Template Name: About Template */
+/* Template Name: Page Not Found Template */
 ?>
 
 <body>

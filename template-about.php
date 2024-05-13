@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php get_header(); 
+/* Template Name: About Template */
+?>
 
 <header class="site-header">
         <nav class="navbar navbar-expand-lg">
