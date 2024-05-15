@@ -56,7 +56,9 @@ while ( $query->have_posts() ) : $query->the_post();
         </div>
     </div>
 </article>
-<?php endwhile; ?>
+<?php endwhile; 
+wp_reset_postdata();
+?>
 <?php endif; ?>
 
 

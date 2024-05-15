@@ -50,8 +50,7 @@
 
     <!-- Page Content -->
     <!-- Banner Starts Here -->
-    <?php echo get_template_part( 'template-parts/heading','page')?>
-
+    <?php echo get_template_part( 'template-parts/heading','page'); ?>
     <!-- Banner Ends Here -->
 
     <section class="call-to-action">
