@@ -116,3 +116,4 @@ function sidebar() {
 }
 
 add_action( 'widgets_init', 'sidebar' );
+
