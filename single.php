@@ -144,9 +144,16 @@
                       <form id="comment" action="#" method="post">
                         <div class="row">
                           <div class="col-md-6 col-sm-12">
-                            <?php 
-                              if (comments_open() || get_comments_number()) :
-                                  comments_template();
+                            <?php
+                              $comments = get_comments( array( 'post_id' => get_the_ID() ) );
+                              if ( $comments ) :
+                                echo '<h3 class="comments-title">Comments</h3>';
+                                echo '<ul class="comment-list">';
+                                foreach ( $comments as $comment ) :
+                                endforeach;
+                                echo '</ul>';
+                              else :
+                                echo '<p class="no-comments">No comments yet.</p>';
                               endif;
                             ?>
                           </div>
